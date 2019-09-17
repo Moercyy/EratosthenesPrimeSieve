@@ -16,7 +16,22 @@ public class Expectation {
 
     }
 
-   
+    public String getPrimeFactors(int a) {
+        EratosthenesPrimeSieve e = new EratosthenesPrimeSieve();
+        int[] pArray = e.generatePrimeNumbers(a);
+        System.out.println(pArray.length);
+        String answer = "";
+        for (int i = 0; i < pArray.length; i++) {
+            for (int j = 0; j < pArray.length; j++) {
+                //System.out.println(sum);
+                if ((pArray[i] + pArray[j] == a)) {
+                    answer = (pArray[i] + " + " + pArray[j]);
+                }
+            }
+
+        }
+        return answer;
+    }
 
 
     public String getPrimeFactors2(int a){

@@ -24,19 +24,15 @@ public class EratosthenesPrimeSieve implements PrimeSieve {
         return p > 1 && rangeClosed(2, (int) sqrt(p)).noneMatch(divisor -> p % divisor == 0);
     }
 
-
     @Override
     public void printPrimes() {
-
         for (int i = 0; i < array.length; i ++){
             System.out.println(array[i]);
         }
     }
 
     public int[] generatePrimeNumbers(int n) {
-
         return range(1, n).parallel().filter(this::isPrime).toArray();
-
     }
 
 
