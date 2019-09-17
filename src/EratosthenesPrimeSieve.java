@@ -16,7 +16,7 @@ public class EratosthenesPrimeSieve implements PrimeSieve {
 
     public EratosthenesPrimeSieve(int value) {
         array = generatePrimeNumbers(value);
-        printPrimes();
+        //printPrimes();
     }
 
     @Override
@@ -38,6 +38,7 @@ public class EratosthenesPrimeSieve implements PrimeSieve {
         return range(1, n).parallel().filter(this::isPrime).toArray();
 
     }
+
 
 
 
